@@ -2,9 +2,9 @@
 ###### Simplified file loading plugin built with jQuery and Bootstrap 4. This one uses the **"FormData"** constructor of javascript in order to pass one to several files.
 
 ## Languages ​​used:
--html
--Javascript
--php 
+- html
+- Javascript
+- php 
 
 ## Framework used:
 - jQuery
