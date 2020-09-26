@@ -21,29 +21,46 @@
 
 ## Available options:  
 
-    - imgpath             : "img/",
-    - jspath              : "js/",
-    - phppath             : "php/",         
-    - targetpath          : "nest/",         
-    - acceptFiles         : "*",
-    - maxFileSize         : "",//  Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes!
-    - maxFileCount        : "",//  Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes!
-    - postMaxSize         : "",//  Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes!
-    - defaultImg          : "file.png",
-    - labelInput1         : "Add your files",
-    - labelInput2         : "Number of files",
-    - labelName           : "Name",
-    - labelType           : "Type file",
-    - labelModified       : "Modified",
-    - labelSize           : "Size",
-    - labelSaveBtn        : "Save",
+**Server information**
+Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
+    - maxFileSize         : ""
+    - maxFileCount        : ""
+    - postMaxSize         : ""
+
+**Directory path**
+    - imgpath             : "img/"
+    - jspath              : "js/"
+    - phppath             : "php/"       
+    - targetpath          : "nest/"  
+
+**List of accepted file types (by default all file)**
+    - acceptFiles         : "*" 
+    - For example :
+
+        $("#example").swallow({        
+            //acceptFiles         : "application/msword,text/csv,image/jpeg"
+        })    
+
+**the image that will appear by default if the file type is unknown**
+    - defaultImg          : "file.png"
+
+**Choose the language you want by redefining the labels**
+    - labelInput1         : "Add your files"
+    - labelInput2         : "Number of files"
+    - labelName           : "Name"
+    - labelType           : "Type file"
+    - labelModified       : "Modified"
+    - labelSize           : "Size"
+    - labelSaveBtn        : "Save"
     - labelDeleteBtn      : "Delete",
-    - labelSuccess        : "File upload successful",
-    - labelAcceptFiles    : "Accepted formats",
-    - labelMaxFileSize    : "Max size accept",
-    - labelMaxFileCount   : "Max files accept",
-    - labelAllDenied      : "Denied !",
-    - onSuccess           : function (response, statut){console.log(response);},
+    - labelSuccess        : "File upload successful"
+    - labelAcceptFiles    : "Accepted formats"
+    - labelMaxFileSize    : "Max size accept"
+    - labelMaxFileCount   : "Max files accept"
+    - labelAllDenied      : "Denied !"
+
+**Functions of callback**
+    - onSuccess           : function (response, statut){console.log(response);}
     - onError             : function (response, statut, erreur){console.log(erreur);}
 
 
