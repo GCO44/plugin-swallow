@@ -22,7 +22,7 @@
 ## Available options:  
 
 **Server information**
-Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
+>Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
 
 - maxFileSize         : ""
 - maxFileCount        : ""
@@ -43,7 +43,7 @@ Automatically limited to data supplied by the server or otherwise you can manual
     })    
 
 **the image that will appear by default if the file type is unknown**
-In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
+>In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
 
 - defaultImg          : "file.png"
 
