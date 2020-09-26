@@ -23,46 +23,48 @@
 
 **Server information**
 Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
-    - maxFileSize         : ""
-    - maxFileCount        : ""
-    - postMaxSize         : ""
+
+- maxFileSize         : ""
+- maxFileCount        : ""
+- postMaxSize         : ""
 
 **Directory path**
-    - imgpath             : "img/"
-    - jspath              : "js/"
-    - phppath             : "php/"       
-    - targetpath          : "nest/"  
+- imgpath             : "img/"
+- jspath              : "js/"
+- phppath             : "php/"       
+- targetpath          : "nest/"  
 
 **List of accepted file types (by default all file)**
-    - acceptFiles         : "*" 
-    - For example :
+- acceptFiles         : "*" 
+- For example :
 
-        $("#example").swallow({        
-            //acceptFiles         : "application/msword,text/csv,image/jpeg"
-        })    
+    $("#example").swallow({        
+        //acceptFiles         : "application/msword,text/csv,image/jpeg"
+    })    
 
 **the image that will appear by default if the file type is unknown**
 In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
-    - defaultImg          : "file.png"
+
+- defaultImg          : "file.png"
 
 **Choose the language you want by redefining the labels**
-    - labelInput1         : "Add your files"
-    - labelInput2         : "Number of files"
-    - labelName           : "Name"
-    - labelType           : "Type file"
-    - labelModified       : "Modified"
-    - labelSize           : "Size"
-    - labelSaveBtn        : "Save"
-    - labelDeleteBtn      : "Delete",
-    - labelSuccess        : "File upload successful"
-    - labelAcceptFiles    : "Accepted formats"
-    - labelMaxFileSize    : "Max size accept"
-    - labelMaxFileCount   : "Max files accept"
-    - labelAllDenied      : "Denied !"
+- labelInput1         : "Add your files"
+- labelInput2         : "Number of files"
+- labelName           : "Name"
+- labelType           : "Type file"
+- labelModified       : "Modified"
+- labelSize           : "Size"
+- labelSaveBtn        : "Save"
+- labelDeleteBtn      : "Delete",
+- labelSuccess        : "File upload successful"
+- labelAcceptFiles    : "Accepted formats"
+- labelMaxFileSize    : "Max size accept"
+- labelMaxFileCount   : "Max files accept"
+- labelAllDenied      : "Denied !"
 
 **Functions of callback**
-    - onSuccess           : function (response, statut){console.log(response);}
-    - onError             : function (response, statut, erreur){console.log(erreur);}
+- onSuccess           : function (response, statut){console.log(response);}
+- onError             : function (response, statut, erreur){console.log(erreur);}
 
 
 ## Licenses
