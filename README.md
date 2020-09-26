@@ -42,6 +42,7 @@ Automatically limited to data supplied by the server or otherwise you can manual
         })    
 
 **the image that will appear by default if the file type is unknown**
+In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
     - defaultImg          : "file.png"
 
 **Choose the language you want by redefining the labels**
