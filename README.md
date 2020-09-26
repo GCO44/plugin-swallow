@@ -38,7 +38,9 @@
 - acceptFiles         : "*" 
 - Example :
 
-> $("#example").swallow({ acceptFiles:"application/msword,text/csv,image/jpeg"})    
+...$("#example").swallow({ 
+        acceptFiles:"application/msword,text/csv,image/jpeg"
+    })...  
 
 **the image that will appear by default if the file type is unknown**
 >In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
