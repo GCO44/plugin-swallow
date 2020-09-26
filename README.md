@@ -1,8 +1,14 @@
 # PLUGIN SWALLOW
 ###### Simplified file loading plugin built with jQuery and Bootstrap 4. This one uses the **"FormData"** constructor of javascript in order to pass one to several files.
 
-## Languages
-###### html 5,Javascript, php, 
+## Languages ​​used:
+-html
+-Javascript
+-php 
+
+## Framework used:
+- jQuery
+- Boostrap 4
 
 ## Requires the installation of at least versions of:
     <!-- jQuery -->
