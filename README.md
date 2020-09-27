@@ -1,5 +1,5 @@
 # SWALLOW - Plugin upload files
-###### Simplified file loading plugin built with jQuery and Bootstrap 4. This one uses the **"FormData"** constructor of javascript in order to pass one to several files.
+## Simplified file loading plugin built with jQuery and Bootstrap 4. This one uses the **"FormData"** constructor of javascript in order to pass one to several files.
 
 ## Languages ​​used:
 - html
@@ -58,6 +58,7 @@
 | acceptFiles         : "*"  | By default any type of file |
 
 >Example :
+
 ```javascript
 $("#example").swallow({ 
         acceptFiles:"application/msword,text/csv,image/jpeg"
@@ -92,6 +93,7 @@ $("#example").swallow({
 **Functions of callback**
 
 >Example :
+
 ```javascript
     $("#example").swallow({ 
         onSuccess : function (response, statut){
