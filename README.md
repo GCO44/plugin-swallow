@@ -24,9 +24,11 @@
 **Server information**
 >Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
 
-- maxFileSize         : ""
-- maxFileCount        : ""
-- postMaxSize         : ""
+| Options | example of value |
+| :---         |     :---:      |
+| maxFileSize         : "" | 10000000 |
+| maxFileCount        : "" | 10 |
+| postMaxSize         : "" | 8000000 |
 
 **Directory path**
 - imgpath             : "img/"
