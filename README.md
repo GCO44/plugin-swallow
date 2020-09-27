@@ -20,7 +20,7 @@
     <script src="https:- stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
     <link rel="stylesheet" href="https:- stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Hirondelle V1 -->
+    <!-- Swallow V1 -->
     <script src="js/swallow.js"></script>    
 
 ## Plugin initialization
