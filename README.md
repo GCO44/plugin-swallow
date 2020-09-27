@@ -35,6 +35,10 @@
     })  
 ```
 
+## Backup directory of selected files
+
+>The files are automatically saved under the "nest /" directory which is automatically created when the Swallow plugin is initialized. The path or the name can be modified (see options).
+
 ## Available options:  
 
 **Server information**
@@ -93,6 +97,8 @@ $("#example").swallow({
 | labelAllDenied      : "Denied !" | String | True |
 
 **Functions of callback**
+
+> "response" is a string in return
 
 ```javascript
 /*Example :*/
