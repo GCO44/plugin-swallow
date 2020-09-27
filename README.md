@@ -23,6 +23,9 @@
 
 >You can find an example accessible from the "index.html" page
 
+    <!-- Hirondelle V1 -->
+    <script src="js/swallow.js"></script>
+
 ```javascript
     $(function() {
         $("#example").swallow({
