@@ -36,26 +36,25 @@
 **Server information**
 >Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
 
-| Options | Example of a byte value |
-| :---         |     :---:      |
-| maxFileSize         : "" | 10000000 |
-| maxFileCount        : "" | 10 |
-| postMaxSize         : "" | 8000000 |
+| Options | type | Example of a byte value |
+| :---         |     :---:      |     :---:      |
+| maxFileSize         : "" | Integer | 5000000 or 5000 * 1000|
+| maxFileCount        : "" | Integer| 10 or 1 * 10 |
 
 **Directory path**
 
-| Options | Content |
-| :---         |     :---:      |
-| imgpath             : "img/" | Contains images of different file types |
-| jspath              : "js/" | Function of the plugin |
-| phppath             : "php/" | Php script which allows the loading of files |
-| targetpath          : "nest/" | File destination directory |  
+| Options | Type | Content |
+| :---         |     :---:      |     :---:      |
+| imgpath             : "img/" | String | Contains images of different file types |
+| jspath              : "js/" | String |  Function of the plugin |
+| phppath             : "php/" | String |  Php script which allows the loading of files |
+| targetpath          : "nest/" | String |  File destination directory |  
 
 **List of accepted file types**
 
-| Options | Restrict file types |
-| :---         |     :---:      |
-| acceptFiles         : "*"  | By default any type of file |
+| Options | Type | Restrict file types |
+| :---         |     :---:      |     :---:      |
+| acceptFiles         : "*"  | String |  By default any type of file |
 
 >Example :
 
@@ -69,26 +68,26 @@ $("#example").swallow({
 
 >In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
 
-| Options | Wording possible |
-| :---         |     :---:      |
-| defaultImg          : "file.png" | True |
+| Options | Type | Wording possible |
+| :---         |     :---:      |     :---:      |
+| defaultImg          : "file.png" | String | True |
 
 **Choose the language you want by redefining the labels**
 
-| Options | Wording possible |
-| :---         |     :---:      |
-| labelInput1         : "Add your files" | True |
-| labelInput2         : "Number of files"| True |
-| labelType           : "Type file"| True |
-| labelModified       : "Modified"| True |
-| labelSize           : "Size"| True |
-| labelSaveBtn        : "Save"| True |
-| labelDeleteBtn      : "Delete",| True |
-| labelSuccess        : "File upload successful"| True |
-| labelAcceptFiles    : "Accepted formats"| True|
-| labelMaxFileSize    : "Max size accept"| True |
-| labelMaxFileCount   : "Max files accept"| True |
-| labelAllDenied      : "Denied !"| True |
+| Options | Type | Wording possible |
+| :---         |     :---:      |     :---:      |
+| labelInput1         : "Add your files" | String | True |
+| labelInput2         : "Number of files" | String | True |
+| labelType           : "Type file" | String | True |
+| labelModified       : "Modified" |  String |True |
+| labelSize           : "Size" | String | True |
+| labelSaveBtn        : "Save" | String | True |
+| labelDeleteBtn      : "Delete" | String | True |
+| labelSuccess        : "File upload successful" | String | True |
+| labelAcceptFiles    : "Accepted formats" | String | True |
+| labelMaxFileSize    : "Max size accept" | String | True |
+| labelMaxFileCount   : "Max files accept" | String | True |
+| labelAllDenied      : "Denied !" | String | True |
 
 **Functions of callback**
 
