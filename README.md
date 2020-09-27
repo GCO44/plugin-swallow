@@ -24,20 +24,26 @@
 **Server information**
 >Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
 
-| Options | example of value |
+| Options | Example of a byte value |
 | :---         |     :---:      |
 | maxFileSize         : "" | 10000000 |
 | maxFileCount        : "" | 10 |
 | postMaxSize         : "" | 8000000 |
 
 **Directory path**
-- imgpath             : "img/"
-- jspath              : "js/"
-- phppath             : "php/"       
-- targetpath          : "nest/"  
 
-**List of accepted file types (by default any type of file)**
-- acceptFiles         : "*" 
+| Options | Content |
+| :---         |     :---:      |
+| imgpath             : "img/" | Contains images of different file types |
+| jspath              : "js/" | Function of the plugin |
+| phppath             : "php/" | Php script which allows the loading of files |
+| targetpath          : "nest/" | File destination directory |  
+
+**List of accepted file types**
+
+| Options | Restrict file types |
+| :---         |     :---:      |
+| acceptFiles         : "*"  | By default any type of file |
 
 >Example :
 ```javascript
@@ -47,29 +53,43 @@ $("#example").swallow({
 ``` 
 
 **the image that will appear by default if the file type is unknown**
+
 >In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
 
-- defaultImg          : "file.png"
+| Options | Wording possible |
+| :---         |     :---:      |
+| defaultImg          : "file.png" | True |
 
 **Choose the language you want by redefining the labels**
-- labelInput1         : "Add your files"
-- labelInput2         : "Number of files"
-- labelName           : "Name"
-- labelType           : "Type file"
-- labelModified       : "Modified"
-- labelSize           : "Size"
-- labelSaveBtn        : "Save"
-- labelDeleteBtn      : "Delete",
-- labelSuccess        : "File upload successful"
-- labelAcceptFiles    : "Accepted formats"
-- labelMaxFileSize    : "Max size accept"
-- labelMaxFileCount   : "Max files accept"
-- labelAllDenied      : "Denied !"
+
+| Options | Wording possible |
+| :---         |     :---:      |
+| labelInput1         : "Add your files" | True |
+| labelInput2         : "Number of files"| True |
+| labelType           : "Type file"| True |
+| labelModified       : "Modified"| True |
+| labelSize           : "Size"| True |
+| labelSaveBtn        : "Save"| True |
+| labelDeleteBtn      : "Delete",| True |
+| labelSuccess        : "File upload successful"| True |
+| labelAcceptFiles    : "Accepted formats"| True|
+| labelMaxFileSize    : "Max size accept"| True |
+| labelMaxFileCount   : "Max files accept"| True |
+| labelAllDenied      : "Denied !"| True |
 
 **Functions of callback**
-- onSuccess           : function (response, statut){console.log(response);}
-- onError             : function (response, statut, erreur){console.log(erreur);}
 
+>Example :
+```javascript
+    $("#example").swallow({ 
+        onSuccess : function (response, statut){
+            console.log(response);
+        },
+        onError : function (response, statut, erreur){
+            console.log(erreur);
+        }
+    })
+``` 
 
 ## Licenses
 - Bootstrap is released under the MIT license and is copyright 2020 Twitter
