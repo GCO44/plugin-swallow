@@ -34,10 +34,10 @@
 - phppath             : "php/"       
 - targetpath          : "nest/"  
 
-**List of accepted file types (by default all file)**
+**List of accepted file types (by default any type of file)**
 - acceptFiles         : "*" 
 - Example :
-...
+...javascript
 $("#example").swallow({ 
         acceptFiles:"application/msword,text/csv,image/jpeg"
     })
