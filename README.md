@@ -62,7 +62,9 @@
 | phppath             : "php/" | String |  Php script which allows the loading of files |
 | targetpath          : "nest/" | String |  File destination directory | 
 
-**The use of a personal directory requires to include these two options**
+**Using a personal directory**
+
+>Force option swallowTag to true. The second option contains a default tag assigned when opening the plugin which can also be personalized for the name of the subdirectory (Spaces, accents or special characters are not allowed).
 
 | Options | Type | Content |
 | :---         |     :---:      |     :---:      |
@@ -72,7 +74,6 @@
 ```javascript
 /*Example :*/
 $("#example").swallow({
-    //Options
     swallowTag          : true,   
     targetTag           : "NamePerso"
 })
