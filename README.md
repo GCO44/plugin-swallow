@@ -34,7 +34,7 @@
 ```javascript
     $(function() {
         $("#example").swallow({
-            //Options
+            //Options...
         })
     })  
 ```
@@ -60,7 +60,23 @@
 | imgpath             : "img/" | String | Contains images of different file types |
 | jspath              : "js/" | String |  Function of the plugin |
 | phppath             : "php/" | String |  Php script which allows the loading of files |
-| targetpath          : "nest/" | String |  File destination directory |  
+| targetpath          : "nest/" | String |  File destination directory | 
+
+**The use of a personal directory requires to include these two options**
+
+| Options | Type | Content |
+| :---         |     :---:      |     :---:      |
+| swallowTag          : true | boolean |  By default false |  
+| targetTag           : "NamePerso" | String |  Do not add a backslash and accent at the end of the chain |  
+
+```javascript
+/*Example :*/
+$("#example").swallow({
+    //Options
+    swallowTag          : true,   
+    targetTag           : "NamePerso"
+})
+``` 
 
 **List of accepted file types**
 
