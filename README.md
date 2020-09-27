@@ -39,19 +39,7 @@
     })  
 ```
 
-## Backup directory of selected files
-
->The files are automatically saved under the "nest /" directory which is automatically created when the Swallow plugin is initialized. The path or the name can be modified (see options).
-
 ## Available options:  
-
-**Server information**
->Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
-
-| Options | type | Example of a byte value |
-| :---         |     :---:      |     :---:      |
-| maxFileSize         : "" | Integer | 5000000 or 5000 * 1000|
-| maxFileCount        : "" | Integer| 20 or 2 * 10 |
 
 **Directory path**
 
@@ -60,7 +48,22 @@
 | imgpath             : "img/" | String | Contains images of different file types |
 | jspath              : "js/" | String |  Function of the plugin |
 | phppath             : "php/" | String |  Php script which allows the loading of files |
+
+**Backup directory of selected files**
+
+>The files are automatically saved under the "nest /" directory which is automatically created when the Swallow plugin is initialized. The path or the name can be modified.
+
+| Options | Type | Content |
+| :---         |     :---:      |     :---:      |
 | targetpath          : "nest/" | String |  File destination directory | 
+
+**Server information**
+>Automatically limited to data supplied by the server or otherwise you can manually force the value only in bytes. You can also fill in your own values ​​in bytes !
+
+| Options | type | Example of a byte value |
+| :---         |     :---:      |     :---:      |
+| maxFileSize         : "" | Integer | 5000000 or 5000 * 1000|
+| maxFileCount        : "" | Integer| 20 or 2 * 10 |
 
 **Using a personal directory**
 
