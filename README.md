@@ -39,7 +39,7 @@
 | Options | type | Example of a byte value |
 | :---         |     :---:      |     :---:      |
 | maxFileSize         : "" | Integer | 5000000 or 5000 * 1000|
-| maxFileCount        : "" | Integer| 10 or 1 * 10 |
+| maxFileCount        : "" | Integer| 20 or 2 * 10 |
 
 **Directory path**
 
@@ -106,5 +106,5 @@ $("#example").swallow({
 
 ## Licenses
 - Bootstrap is released under the MIT license and is copyright 2020 Twitter
-- jQuery [MIT license](https:- tldrlegal.com/license/mit-license)
+- jQuery [MIT license](https:tldrlegal.com/license/mit-license)
 
