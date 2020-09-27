@@ -60,9 +60,8 @@
 | :---         |     :---:      |     :---:      |
 | acceptFiles         : "*"  | String |  By default any type of file |
 
->Example :
-
 ```javascript
+/*Example :*/
 $("#example").swallow({ 
         acceptFiles:"application/msword,text/csv,image/jpeg"
     })
@@ -95,9 +94,8 @@ $("#example").swallow({
 
 **Functions of callback**
 
->Example :
-
 ```javascript
+/*Example :*/
     $("#example").swallow({ 
         onSuccess : function (response, statut){
             console.log(response);
