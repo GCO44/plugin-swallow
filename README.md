@@ -1,7 +1,6 @@
 # SWALLOW - File upload plugin for all screen sizes
 ## Simplified file upload plugin built in "jQuery" and "Bootstrap 4". This uses the "FormData" constructor of javascript in order to ensure the management ranging from one to several files as well as the functions made available to you.
-
-###### Une étape de prévisualisation permet également de controler ou de supprimer un plusieurs fichiers.
+## A preview step also allows you to control or delete one or more files.
 
 ## Languages ​​used:
 - html
