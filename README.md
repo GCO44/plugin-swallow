@@ -1,5 +1,5 @@
-# SWALLOW - Plugin upload files
-## Simplified file loading plugin built with jQuery and Bootstrap 4. This one uses the **"FormData"** constructor of javascript in order to pass one to several files.
+# SWALLOW - File upload plugin for all screen sizes
+## Simplified file upload plugin built in "jQuery" and "Bootstrap 4". This uses the ** "FormData" ** constructor of javascript in order to ensure the management ranging from one to several files as well as the functions made available to you.
 
 ## Languages ​​used:
 - html
