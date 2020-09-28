@@ -1,6 +1,30 @@
 
-[![npm version](https://badge.fury.io/js/github-release-downloader.svg)](https://badge.fury.io/js/github-release-downloader)
-[![license](https://img.shields.io/github/license/practicaljs/github-release-downloader.svg)](https://github.com/practicaljs/github-release-downloader/blob/master/LICENSE)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Total Download</title>
+</head>
+<body>
+<p style="font-size: 500%; text-align: center">Total Downloads:</p>
+<p id="download" style="font-size:1000%; text-align: center"></p>
+<script type="text/javascript">
+    let userName = "GCO44"; // User name of the repository
+    let repoName = "plugin-swallow"; // Repository name
+    let releaseTag = "latest"; // Using tag 'latest' for latest released download count
+    let url = `https://api.github.com/repos/${userName}/${repoName}/releases/${releaseTag}`;
+    let request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.onload = function () {
+        let users = JSON.parse(this.response);
+        let output = users['assets'][0]["download_count"];
+        console.log(output);
+        document.getElementById('download').innerHTML = output;
+    };
+    request.send();
+</script>
+</body>
+</html>
 
 # SWALLOW - File upload plugin for all screen sizes
 ## Simplified file upload plugin built in "jQuery" and "Bootstrap 4". This uses the "FormData" constructor of javascript in order to ensure the management ranging from one to several files as well as the functions made available to you. A preview step also allows you to control or delete one or more files.
