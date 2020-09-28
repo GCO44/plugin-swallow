@@ -1,5 +1,5 @@
 
-[![Downloads](http://img.shields.io/npm/dm/plugin-swallow.svg)](https://npmjs.org/package/plugin-swallow)
+[![license](https://img.shields.io/github/license/practicaljs/github-release-downloader.svg)](https://github.com/practicaljs/github-release-downloader/blob/master/LICENSE)
 
 # SWALLOW - File upload plugin for all screen sizes
 ## Simplified file upload plugin built in "jQuery" and "Bootstrap 4". This uses the "FormData" constructor of javascript in order to ensure the management ranging from one to several files as well as the functions made available to you. A preview step also allows you to control or delete one or more files.
