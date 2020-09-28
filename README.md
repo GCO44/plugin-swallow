@@ -1,5 +1,5 @@
 
-[![Build status](https://ci.appveyor.com/api/projects/status/4fdxoq06aq002end/branch/master?svg=true)](https://ci.appveyor.com/project/practicaljs/github-release-downloader/branch/master)
+[![npm version](https://badge.fury.io/js/github-release-downloader.svg)](https://badge.fury.io/js/github-release-downloader)
 [![license](https://img.shields.io/github/license/practicaljs/github-release-downloader.svg)](https://github.com/practicaljs/github-release-downloader/blob/master/LICENSE)
 
 # SWALLOW - File upload plugin for all screen sizes
