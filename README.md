@@ -41,6 +41,30 @@
     })  
 ```
 
+>Or if you want to incorporate it into a custom tree structure
+
+```javascript
+$(function() {
+        $("#example").swallow({
+            phpPath             : "asset/plugin-swallow-master/php/",
+            imgPath             : "asset/plugin-swallow-master/img/"
+            //Options...
+        })
+    })  
+```
+
+```html
+<div class="container mt-3">
+
+    <h1>Plugin Swallow</h1>
+
+    <div class="mt-3">
+        <div id="example"></div>            
+    </div>
+
+</div> 
+```
+
 ## Available options:  
 
 **Directory path**
