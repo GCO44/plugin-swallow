@@ -1,6 +1,6 @@
 /*
 * Plugin Swallow
-* version: 1.0
+* version: 1.1
 * requires jQuery and bootstrap 4
 * Copyright (c) 2020 Franck BROCHET
 */
@@ -13,20 +13,21 @@ $(function() {
 
     $.fn.swallow = function (options){
 
-    //Name of FileUpload
-        nameId = this.attr('id')
+    //Config path by default
+        var pat = $.extend({
+            imgPath             : "img/",
+            phpPath             : "php/",         
+            targetPath          : "nest/"
+        }, options);   
 
     //Search on the PHP server configuration items
-        $.ajax({url:'php/info.php',async:false,
+        $.ajax({url:pat.phpPath + 'info.php',async:false,
             success: (s) => {infoPhp.push(JSON.parse(s));},
             error: () => {alert('require ==> info.php');return false;},
         })
 
-        var ext = $.extend({
-            imgPath             : "img/",
-            jsPath              : "js/",
-            phpPath             : "php/",         
-            targetPath          : "nest/",   
+    //Config options user by default
+        var ext = $.extend({ 
             swallowTag          : false,   
             targetTag           : infoPhp[0]['tag_swallow'],            
             method              : "POST",
@@ -72,7 +73,7 @@ $(function() {
                 <ul class="list-unstyled gallery"></ul>\
                 <div class="toast" role="alert" data-delay="2000" aria-live="assertive" aria-atomic="true" id="SuccUpload">\
                 <div class="toast-header">\
-                <img src="'+ ext.imgPath + ext.defaultImg +'" class="rounded mr-2" height="15" width="15">\
+                <img src="'+ pat.imgPath + ext.defaultImg +'" class="rounded mr-2" height="15" width="15">\
                 <strong class="mr-auto">Swallow</strong>\
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">\
                   <span aria-hidden="true">&times;</span>\
@@ -134,13 +135,13 @@ $(function() {
                     reader.onload = (e) => {
 
                         var $LastModified = new Date(file.lastModified).toISOString().split('T')[0]
-                        var ReaderResultat= ext.imgPath + ext.defaultImg;                        
+                        var ReaderResultat= pat.imgPath + ext.defaultImg;                        
                         Object.keys($mimeType).forEach(m => {
                             if($mimeType[m].type === file.type){
                                 switch ($mimeType[m].source) {
                                     case 'img'          :ReaderResultat = reader.result;break;
                                     case 'no-img' :ReaderResultat;break;
-                                    default          :ReaderResultat = ext.imgPath + $mimeType[m].source;
+                                    default          :ReaderResultat = pat.imgPath + $mimeType[m].source;
                                 }
                             }
                         })
@@ -204,11 +205,11 @@ $(function() {
         $("#SaveFiles").on("click", function(){
 
             formData.append('userFile',postfiles);
-            formData.append('target',ext.targetPath);
+            formData.append('target',pat.targetPath);
             if(ext.swallowTag === true){formData.append('targetTag',ext.targetTag + '/');}
             
             $.ajax({
-                    url: ext.phpPath + 'upload.php',
+                    url: pat.phpPath + 'upload.php',
                     type: ext.method,                    
                     cache: false,
                     contentType: false,
