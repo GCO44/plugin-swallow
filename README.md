@@ -44,7 +44,7 @@
 >Or if you want to incorporate it into a custom tree structure
 
 ```javascript
-$(function() {
+    $(function() {
         $("#example").swallow({
             phpPath             : "asset/plugin-swallow-master/php/",
             imgPath             : "asset/plugin-swallow-master/img/"
@@ -52,6 +52,7 @@ $(function() {
         })
     })  
 ```
+> Html side
 
 ```html
 <div class="container mt-3">
@@ -72,7 +73,6 @@ $(function() {
 | Options | Type | Content |
 | :---         |     :---:      |     :---:      |
 | imgpath             : "img/" | String | Contains images of different file types |
-| jspath              : "js/" | String |  Function of the plugin |
 | phppath             : "php/" | String |  Php script which allows the loading of files |
 
 **Backup directory of selected files**
