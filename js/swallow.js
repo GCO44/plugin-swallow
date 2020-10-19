@@ -71,7 +71,7 @@ $(function() {
             </div>\
             <div class="col-12 mt-2">\
                 <ul class="list-unstyled gallery"></ul>\
-                <div class="toast" role="alert" data-delay="2000" aria-live="assertive" aria-atomic="true" id="SuccUpload">\
+                <div class="toast d-none" role="alert" data-delay="2000" aria-live="assertive" aria-atomic="true" id="SuccUpload">\
                 <div class="toast-header">\
                 <img src="'+ pat.imgPath + ext.defaultImg +'" class="rounded mr-2" height="15" width="15">\
                 <strong class="mr-auto">Swallow</strong>\
@@ -223,7 +223,11 @@ $(function() {
                         $("#SaveFiles").removeClass('d-block').addClass('d-none');
                         $("#ErrUpload").removeClass('d-block').addClass('d-none');
                         $(".custom-file-label").html(ext.labelInput1);
-                        $('#SuccUpload').toast('show');                   
+                        $("#SuccUpload").removeClass('d-none').addClass('d-block');
+                        $('#SuccUpload').toast('show');    
+                        $('#SuccUpload').on('hidden.bs.toast', function () {
+                            $('#SuccUpload').removeClass('d-block').addClass('d-none');
+                          })               
                         postfiles = [];
 
                     },
