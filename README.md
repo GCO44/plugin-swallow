@@ -140,6 +140,7 @@ $("#example").swallow({
 | labelSize           : "Size" | String | True |
 | labelSaveBtn        : "Save" | String | True |
 | labelDeleteBtn      : "Delete" | String | True |
+| labelLoadingBtn     : "Loading.." | String | True |
 | labelSuccess        : "File upload successful" | String | True |
 | labelAcceptFiles    : "Accepted formats" | String | True |
 | labelMaxFileSize    : "Max size accept" | String | True |

@@ -1,6 +1,6 @@
 /*
 * Plugin Swallow
-* version: 1.1
+* version: 1.2
 * requires jQuery and bootstrap 4
 * Copyright (c) 2020 Franck BROCHET
 */
@@ -26,7 +26,7 @@ $(function() {
             error: () => {alert('require ==> info.php');return false;},
         })
 
-    //Config options user by default
+    //Config options user
         var ext = $.extend({ 
             swallowTag          : false,   
             targetTag           : infoPhp[0]['tag_swallow'],            
@@ -45,6 +45,7 @@ $(function() {
             labelSize           : "Size",
             labelSaveBtn        : "Save",
             labelDeleteBtn      : "Delete",
+            labelLoadingBtn     : "Loading...",
             labelSuccess        : "File upload successful",
             labelAcceptFiles    : "Accepted formats",
             labelMaxFileSize    : "Max size accept",
@@ -53,6 +54,8 @@ $(function() {
             onSuccess           : function (response, statut) {},
             onError             : function (response, statut, erreur) {}
         }, options);
+
+        
 
     //Form input bootstrap 4
         $(this).append('\
@@ -66,12 +69,13 @@ $(function() {
                         </div>\
                         <div class="mt-1">\
                             <button class="btn btn-block btn-success d-none" id="SaveFiles" type="button">'+ ext.labelSaveBtn +'</button>\
+                            <button class="btn btn-block btn-info WaitSpinner d-none" disabled><span class="spinner-grow spinner-grow-sm"></span> '+ ext.labelLoadingBtn +'</button>\
                         </div>\
                 </form>\
             </div>\
             <div class="col-12 mt-2">\
                 <ul class="list-unstyled gallery"></ul>\
-                <div class="toast d-none" role="alert" data-delay="2000" aria-live="assertive" aria-atomic="true" id="SuccUpload">\
+                <div class="toast d-none" aria-atomic="true" data-delay="2000" id="SuccUpload">\
                 <div class="toast-header">\
                 <img src="'+ pat.imgPath + ext.defaultImg +'" class="rounded mr-2" height="15" width="15">\
                 <strong class="mr-auto">Swallow</strong>\
@@ -154,7 +158,7 @@ $(function() {
                                 <h6 class="text-break">'+ ext.labelType +': '+ file.type +'</h6>\
                                 <h6 class="text-break">'+ ext.labelModified +': '+ new Date(file.lastModified).toISOString().split('T')[0] +'</h6>\
                                 <h6 class="text-break">'+ ext.labelSize +': '+ Math.round((file.size / 1000000)*100)/100 +' Mo</h6>\
-                                <button data-id="'+ file.name +'" class="btn btn-danger erase">'+ ext.labelDeleteBtn +'</button>\
+                                <button data-id="'+ file.name +'" class="btn btn-danger Erase">'+ ext.labelDeleteBtn +'</button>\
                                 </div>\
                             </li>\
                         ')
@@ -177,7 +181,7 @@ $(function() {
         });
         
     //Delete File
-        $("div ul").on("click", ".erase", function(){
+        $("div ul").on("click", ".Erase", function(){
 
             DataId = $(this).attr('data-id');
             tmp_postfiles = [];
@@ -207,6 +211,11 @@ $(function() {
             formData.append('userFile',postfiles);
             formData.append('target',pat.targetPath);
             if(ext.swallowTag === true){formData.append('targetTag',ext.targetTag + '/');}
+
+            $("#SaveFiles").removeClass('d-block').addClass('d-none');
+            $("#ErrUpload").removeClass('d-block').addClass('d-none');
+            $( ".Erase" ).prop( "disabled", true );
+            $(".WaitSpinner").removeClass('d-none').addClass('d-block');            
             
             $.ajax({
                     url: pat.phpPath + 'upload.php',
@@ -220,8 +229,8 @@ $(function() {
                         ext.onSuccess.call(this, response, statut);
 
                         $(".gallery").empty();
-                        $("#SaveFiles").removeClass('d-block').addClass('d-none');
-                        $("#ErrUpload").removeClass('d-block').addClass('d-none');
+                        $( ".Erase" ).prop( "disabled", false );                       
+                        $(".WaitSpinner").removeClass('d-block').addClass('d-none'); 
                         $(".custom-file-label").html(ext.labelInput1);
                         $("#SuccUpload").removeClass('d-none').addClass('d-block');
                         $('#SuccUpload').toast('show');    
@@ -233,6 +242,7 @@ $(function() {
                     },
                     error: function(response, statut, erreur){
 
+                        $(".WaitSpinner").removeClass('d-block').addClass('d-none'); 
                         ext.onError.call(this, response, statut, erreur);
 
                     }
