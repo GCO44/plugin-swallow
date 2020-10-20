@@ -120,8 +120,20 @@ $("#example").swallow({
         acceptFiles:"application/msword,text/csv,image/jpeg"
     })
 ``` 
+**You can also reduce the image quality to compress the size on formats (png, jpeg, jpeg, gif).**
 
-**the image that will appear by default if the file type is unknown**
+| Options | Type | Values accept |
+| :---         |     :---:      |     :---:      |
+| maxImgQuality          : 100 | Integer | 0 to 100 |
+
+```javascript
+/*Example :*/
+$("#example").swallow({ 
+        maxImgQuality: 50
+    })
+``` 
+
+**The image that will appear by default if the file type is unknown**
 
 >In the "img" folder, find an image collection that associates with files that you can replace by keeping the name of the original file.
 

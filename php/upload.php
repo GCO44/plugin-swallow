@@ -4,6 +4,7 @@
 //print_r($_POST);
 
 $target = '../'.$_POST['target'];
+$maxImgQuality = $_POST['maxImgQuality'];
 
 // Target by defaut
 if(is_dir($target)){}else{mkdir($target);}
@@ -13,7 +14,7 @@ if(isset($_POST['targetTag'])){
     if(is_dir($target.$personnalTarget)){}else{mkdir($target.$personnalTarget);}
 }
     
-//
+
 $userFile = explode(',',$_POST['userFile']);
 
 if(is_array($_FILES["swallow"]["name"])){
@@ -26,11 +27,31 @@ if(is_array($_FILES["swallow"]["name"])){
         $temp = $_FILES['swallow']['tmp_name'][$i];
 
         $pathFile = time().'_'.$name;
-
-    //
+    
         for( $k = 0; $k < count( $userFile); $k++ ) {
             if($userFile[$k] === $name){
-                move_uploaded_file($temp,$target.$pathFile);
+
+                $size = getimagesize($temp);
+
+                switch($size["mime"]){
+                    case "image/jpeg":
+                    case "image/jpg":
+                            $imgSrc = imagecreatefromjpeg($temp); //jpeg file
+                            imagejpeg($imgSrc, $target.$pathFile,$maxImgQuality);
+                        break;
+                    case "image/gif":
+                            $imgSrc = imagecreatefromgif($temp); //gif file
+                            imagegif($imgSrc, $target.$pathFile,$maxImgQuality);
+                        break;
+                    case "image/png":
+                            $imgSrc = imagecreatefrompng($temp); //png file
+                            imagepng($imgSrc, $target.$pathFile,$maxImgQuality);
+                        break;
+                    default:
+                            move_uploaded_file($temp,$target.$pathFile);//Other file
+                        break;
+                }
+
                 $callback[] = $pathFile;
             } 
         }       

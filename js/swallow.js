@@ -36,6 +36,7 @@ $(function() {
             maxFileSize         : infoPhp[0]['upload_max_filesize'],
             maxFileCount        : infoPhp[0]['max_file_uploads'],
             postMaxSize         : infoPhp[0]['post_max_size'],
+            maxImgQuality       : 50,
             defaultImg          : "file.png",
             labelInput1         : "Add your files",
             labelInput2         : "Number of files",
@@ -211,10 +212,11 @@ $(function() {
             formData.append('userFile',postfiles);
             formData.append('target',pat.targetPath);
             if(ext.swallowTag === true){formData.append('targetTag',ext.targetTag + '/');}
+            formData.append('maxImgQuality',ext.maxImgQuality);
 
             $("#SaveFiles").removeClass('d-block').addClass('d-none');
             $("#ErrUpload").removeClass('d-block').addClass('d-none');
-            $( ".Erase" ).prop( "disabled", true );
+            $(".Erase").prop("disabled", true );
             $(".WaitSpinner").removeClass('d-none').addClass('d-block');            
             
             $.ajax({
@@ -229,7 +231,7 @@ $(function() {
                         ext.onSuccess.call(this, response, statut);
 
                         $(".gallery").empty();
-                        $( ".Erase" ).prop( "disabled", false );                       
+                        $(".Erase").prop( "disabled", false );                       
                         $(".WaitSpinner").removeClass('d-block').addClass('d-none'); 
                         $(".custom-file-label").html(ext.labelInput1);
                         $("#SuccUpload").removeClass('d-none').addClass('d-block');
