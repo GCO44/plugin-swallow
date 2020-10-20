@@ -36,7 +36,7 @@ $(function() {
             maxFileSize         : infoPhp[0]['upload_max_filesize'],
             maxFileCount        : infoPhp[0]['max_file_uploads'],
             postMaxSize         : infoPhp[0]['post_max_size'],
-            maxImgQuality       : 50,
+            maxImgQuality       : 100,
             defaultImg          : "file.png",
             labelInput1         : "Add your files",
             labelInput2         : "Number of files",
