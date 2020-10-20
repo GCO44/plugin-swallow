@@ -37,15 +37,15 @@ if(is_array($_FILES["swallow"]["name"])){
                     case "image/jpeg":
                     case "image/jpg":
                             $imgSrc = imagecreatefromjpeg($temp); //jpeg file
-                            imagejpeg($imgSrc, $target.$pathFile,$maxImgQuality);
+                            imagejpeg($imgSrc, $target.$pathFile,intval($maxImgQuality));
                         break;
                     case "image/gif":
                             $imgSrc = imagecreatefromgif($temp); //gif file
-                            imagegif($imgSrc, $target.$pathFile,$maxImgQuality);
+                            imagegif($imgSrc, $target.$pathFile,intval($maxImgQuality));
                         break;
                     case "image/png":
                             $imgSrc = imagecreatefrompng($temp); //png file
-                            imagepng($imgSrc, $target.$pathFile,$maxImgQuality);
+                            imagepng($imgSrc, $target.$pathFile,intval($maxImgQuality));
                         break;
                     default:
                             move_uploaded_file($temp,$target.$pathFile);//Other file
