@@ -122,6 +122,8 @@ $("#example").swallow({
 ``` 
 **You can also reduce the image quality to compress the size on formats (png, jpeg, jpeg, gif).**
 
+>This value is by default at 100.
+
 | Options | Type | Values accept |
 | :---         |     :---:      |     :---:      |
 | maxImgQuality          : 100 | Integer | 0 to 100 |
